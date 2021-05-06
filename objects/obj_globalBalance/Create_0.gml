@@ -41,3 +41,5 @@ level[20] = room_Gravity6
 
 // file_delete(game_save_id + "savedata.dat")
 ql();
+if (file_exists(global.customleveldirectory + "TEMPLEVEL")) {file_delete(global.customleveldirectory + "TEMPLEVEL")}
+repeat(2){SortLevels();}

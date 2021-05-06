@@ -18,3 +18,4 @@ if (obj_globalBalance.customleveltested) {
 } else {show_message_async("Error: A level needs to have a single Player and at least one Exit.")}
 } else {show_message_async("Error: You need to Playtest your level before it can be saved.")}
 
+if (file_exists(global.customleveldirectory + "TEMPLEVEL")) {file_delete(global.customleveldirectory + "TEMPLEVEL")}

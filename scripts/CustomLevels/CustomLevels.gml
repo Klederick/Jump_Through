@@ -127,7 +127,6 @@ ini_close(); return ldata
 #endregion
 
 function SeekLevels() {
-	if (file_exists(global.customleveldirectory + "TEMPLEVEL")) {file_delete(global.customleveldirectory + "TEMPLEVEL")}
 	files = ds_list_create();
 	file = file_find_first(global.customleveldirectory + "*", fa_directory)
 	array[0] = "0";
@@ -138,15 +137,55 @@ function SeekLevels() {
 	for (i=0;i<ds_list_size(files);i++) {
 		array[i] = ds_list_find_value(files, i)
 	}
+	ds_list_destroy(files);
 	return array
 }
 function SeekAnyLevel(){
-		if (file_exists(global.customleveldirectory + "TEMPLEVEL")) {file_delete(global.customleveldirectory + "TEMPLEVEL")}
 	files = ds_list_create();
 	file = file_find_first(global.customleveldirectory + "*", fa_directory)
 	while (file != "") {
 	ds_list_add(files, file)
 	file = file_find_next();
 	}
+	ds_list_destroy(files);
 	return ds_list_size(files);
+}
+
+function DeleteLevel(selectedlevel){
+	if show_question_async("Do you really want to delete level: " + selectedlevel + "?") {
+		file_delete(global.customleveldirectory + selectedlevel);
+	}
+}
+
+function SortLevels(){
+	
+	levellist = SeekLevels();
+	
+	for (i=0;i<array_length(levellist);i++){
+		expectedname = "CustomLevel_"+string(i+1);
+		if (levellist[i] != expectedname) {
+			result = file_rename(global.customleveldirectory+levellist[i], global.customleveldirectory+expectedname);
+		}
+	}
+	
+	
+	/*files = ds_list_create();
+	file = file_find_first(global.customleveldirectory + "*", fa_directory)
+	array[0] = "0";
+	while (file != "") {
+	ds_list_add(files, file)
+	file = file_find_next();
+	}
+	
+	//ds_list_sort(files, true);
+	//ds_list_shuffle(files)
+	for (i=0;i<ds_list_size(files);i++) {show_debug_message("DSFILES: " + ds_list_find_value(files, i))}
+	for (i=1;i<(ds_list_size(files)-1);i++) {
+		if (!(string(ds_list_find_value(files, i-1)) == "CustomLevel_"+string(i))) {
+			result = file_rename(global.customleveldirectory+string(ds_list_find_value(files, i-1)), global.customleveldirectory+"CustomLevel_"+string(i));
+			show_debug_message(result)
+		}
+	}
+	
+	ds_list_destroy(files)*/
 }
