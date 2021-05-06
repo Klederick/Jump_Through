@@ -130,7 +130,7 @@ function SeekLevels() {
 	if (file_exists(global.customleveldirectory + "TEMPLEVEL")) {file_delete(global.customleveldirectory + "TEMPLEVEL")}
 	files = ds_list_create();
 	file = file_find_first(global.customleveldirectory + "*", fa_directory)
-	array[0] = 0;
+	array[0] = "0";
 	while (file != "") {
 	ds_list_add(files, file)
 	file = file_find_next();

@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+if (nolevels = 0 || array_length(levels) = 1) {
 timer++;
 if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))){
 if(mutation > 0){
@@ -22,4 +21,5 @@ if(keyboard_check_pressed(vk_enter) || mouse_check_button_pressed(mb_left)) && t
 	obj_globalBalance.playtestload = false;
 	obj_globalBalance.roomtogo = LevelBuilder
 	instance_create_depth(0,0,-1000,obj_fadeout)
+}
 }

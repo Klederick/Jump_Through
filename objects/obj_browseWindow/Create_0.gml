@@ -9,6 +9,7 @@ case 131: pos = 1 current = 1 break;
 case 171: pos = 2 current = 2 break;
 default: break;
 }
-if(pos = 1 && obj_browseControl.mutation = 0){
-selected = 1	
+if((pos = 1 && obj_browseControl.mutation = 0) || array_length(obj_browseControl.levels) = 1){
+selected = 1
 }
+show_debug_message("selected " + string(selected))

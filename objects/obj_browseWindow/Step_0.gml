@@ -1,5 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
+if (array_length(obj_browseControl.levels) = 1) {
+	selected = 1
+	sprite_index = spr_menuBrowserSelected;
+} else {
+
 current = obj_browseControl.position+pos
 if(obj_browseControl.mutation = current){
 selected = 1;	
@@ -23,4 +26,5 @@ sprite_index = spr_menuBrowserSelected
 	
 }else{
 sprite_index = spr_menuBrowser	
+}
 }
