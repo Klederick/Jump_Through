@@ -25,6 +25,8 @@ if(obj_menuSelect.onme = 1){
 	if(browser = 0){
  if(obj_menuBrowse.onme = 1){
 	//browse	 
+	
+	
 	if instance_exists(obj_menuBrowse){
 	with obj_menuBrowse instance_destroy();
 	with obj_menuCreate instance_destroy();
@@ -32,6 +34,7 @@ if(obj_menuSelect.onme = 1){
 	instance_create_layer(x,y,"Text",obj_browseControl)
 	browser = 1
 	creator = 0
+	
  }else{
 	obj_globalBalance.roomtogo = room_LevelCreate
 	instance_create_depth(0,0,-1000,obj_fadeout)
