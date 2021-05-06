@@ -1,0 +1,1 @@
+if (!instance_exists(GravityController)) {instance_create_depth(0, 0, 0, GravityController)}
