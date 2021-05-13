@@ -1,4 +1,6 @@
-if (nolevels = 0 || array_length(levels) = 1) {
+show_debug_message("levels: "+string(array_length(levels)));
+if (nolevels = 0 || array_length(levels) > 1) {
+
 timer++;
 if(keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"))){
 if(mutation > 0){
