@@ -2,6 +2,7 @@
 // You can write your code in this editor
 selected = 0
 choice = obj_createMenuControl.choice
+
 switch(choice){
 case 0: choice = S_Player break;
 case 1: choice = S_Exit break;

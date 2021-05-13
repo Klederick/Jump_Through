@@ -7,7 +7,7 @@ obj_createMenuControl.currentsprite = choice
 }
 
 }else{
-if mouse_check_button_pressed(mb_left) && obj_createMenuControl.currentsprite != choice {
+if mouse_check_button_pressed(mb_left) {
 selected = 0 	
 }	
 }
