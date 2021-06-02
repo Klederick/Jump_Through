@@ -7,6 +7,7 @@ if (obj_globalBalance.customleveltested) {
 	levelname = get_string("What would you like to name this level?", "My Custom Level")
 	if (levelname != "") {
 
+	levelname = string_replace_all(levelname, chr(34), ""); creatorname = string_replace_all(creatorname, chr(34), "");
 	SaveLevel(levelname, creatorname, obj_grid.width, obj_grid.height, obj_grid.grid)
 	show_message_async("Level sucessfully saved.")
 	
