@@ -1,5 +1,6 @@
 // [int] levelprogress
 // [arr] leveltime
+window_set_caption("Jump Through - Press F4 for fullscreen")
 window_set_cursor(cr_none)
 var levelprogress = 21;
 for(i=0; i<levelprogress; i++){

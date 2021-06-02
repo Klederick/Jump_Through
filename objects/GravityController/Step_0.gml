@@ -1,5 +1,5 @@
 /// @description PLAYER GRAVITY
-
+if instance_exists(Player){
 if(Player.stop == false){
 	if (gflip){with (Player){ // g flipped
 	hspd = move*walkspd;
@@ -33,4 +33,4 @@ if(Player.stop == false){
 	}}
 	
 with (Player) {y += round(vspd);}
-}
+}}
