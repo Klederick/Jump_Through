@@ -3,6 +3,9 @@
 draw_self()
 if(mouse_x > x && mouse_x < x+sprite_width && mouse_y > y && mouse_y < y+sprite_height){
 if mouse_check_button(mb_left){
+	if(obj_globalBalance.customleveltested = true){
+	obj_globalBalance.customleveltested = false;	
+	}
 if obj_createMenuControl.currentsprite != 0{
 if (obj_createMenuControl.currentsprite = 9 && (obj_grid.grid[tilex,tiley] = o_Player || obj_grid.grid[tilex,tiley] = o_Exit)){
 	if (CheckPlayerExit(obj_grid.width, obj_grid.height, obj_grid.grid)) {
