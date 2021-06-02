@@ -6,6 +6,13 @@ move = key_right - key_left
 
 if (!instance_exists(GravityController)) {instance_create_depth(0, 0, 0, GravityController)}
 
+if (place_meeting(x, y, other)) {x++; y++;} 
+if (place_meeting(x+32, y, other)) {x--; y++;}
+if (place_meeting(x, y+32, other)) {x++; y--;}
+if (place_meeting(x+32, y+32, other)) {x--; y--;}
+
+
+
 
 /*
 if(stop == false){
