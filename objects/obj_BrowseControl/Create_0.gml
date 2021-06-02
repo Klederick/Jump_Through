@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (file_exists(global.customleveldirectory + "TEMPLEVEL")) {file_delete(global.customleveldirectory + "TEMPLEVEL")}
+
 nolevels = 0;
 timer = 0
 mutation = 1
