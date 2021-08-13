@@ -37,8 +37,5 @@ switch(y){
 	break;
 	default: break;
 }
-if(obj_globalBalance.levelprogress+1 < level){
-image_blend = c_black
-}
 
 

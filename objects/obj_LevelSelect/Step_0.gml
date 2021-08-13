@@ -5,3 +5,4 @@ sprite_index = spr_playerSelect;
 }else{
 sprite_index = S_Player;
 }
+level = level + (obj_levelControl.page*21)
